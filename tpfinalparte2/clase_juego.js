@@ -30,30 +30,8 @@ class Juego {
   this.interfaz.dibujar(this.paulino.energia);
 
   if (this.perdio) {
-    fill(0, 0, 0, 180);
-    rect(0, 0, width, height);
-
-    fill(255);
-    textAlign(CENTER);
-    textSize(45);
-    text("GAME OVER", width / 2, height / 2);
-    textSize(20);
-    text("Paulino no logró sobrevivir", width / 2, height / 2 + 45);
-    // TEXTO SIN FUNCION PORQUE AL FINAL PUSIMOS IMG
-    textAlign(LEFT);
   }
   if (this.gano) {
-    fill(0, 0, 0, 180);
-    rect(0, 0, width, height);
-
-    fill(255);
-    textAlign(CENTER);
-    textSize(40);
-    text("¡PAULINO SOBREVIVIÓ!", width / 2, height / 2);
-    textSize(20);
-    text("Logró superar la corriente", width / 2, height / 2 + 45);
-    // TEXTO SIN FUNCION PORQUE AL FINAL PUSIMOS IMG
-    textAlign(LEFT);
   }
 }
 

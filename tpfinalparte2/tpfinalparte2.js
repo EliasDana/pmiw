@@ -9,6 +9,7 @@ let pantallaDerrota;
 let pantallaVictoria;
 let pantallas;
 let miTipografia;
+let sonidoRio;
 
 function preload() {
   fondoRio = loadImage("data/fondoRio.png");
@@ -19,7 +20,7 @@ function preload() {
   pantallaDerrota = loadImage("data/derrota.png");
   pantallaVictoria = loadImage("data/victoria.png");
   miTipografia = loadFont("data/Redaction10-Regular.ttf");
-  
+  sonidoRio = loadSound("data/sonidoRio.mp3");
   
   for (let i = 0; i < 8; i++) {
     framesPaulino[i] = loadImage("data/paulino" + (i + 1) + ".png");
@@ -47,10 +48,12 @@ function draw() {
 
     if (juego.perdio) {
       pantallas.estado = 4;
+      sonidoRio.stop();
     }
 
     if (juego.gano) {
       pantallas.estado = 5;
+      sonidoRio.stop();
     }
 
   } else {

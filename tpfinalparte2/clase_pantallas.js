@@ -63,6 +63,7 @@ class Pantallas {
       if (x > 290 && x < 510 && y > 367 && y < 413) {
         juego = new Juego();
         this.estado = 3;
+        sonidoRio.loop();
       }
       if (x > 290 && x < 510 && y > 432 && y < 478) {
         this.estado = 1;
