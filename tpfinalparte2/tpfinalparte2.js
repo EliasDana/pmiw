@@ -2,7 +2,7 @@
 // Alejandro del Nogal 125564/4
 // Elias Dana 125563/3
 // comision 1
-// ttps://youtu.be/oajtZ9TFyls
+// https://youtu.be/oajtZ9TFyls
 
 let juego;
 let framesPaulino = [];
