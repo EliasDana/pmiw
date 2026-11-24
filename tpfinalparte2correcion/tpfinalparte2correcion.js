@@ -4,9 +4,9 @@
 // comision 1
 // url
 
-let juego;
 let framesPaulino = [];
 let imagenesTroncos = [];
+let fondoRio;
 let barraEnergia;
 let pantallaInicio;
 let pantallaInstrucciones;
@@ -27,11 +27,11 @@ function preload() {
   pantallaVictoria = loadImage("data/victoria.png");
   miTipografia = loadFont("data/Redaction10-Regular.ttf");
   sonidoRio = loadSound("data/sonidoRio.mp3");
-  
+
   for (let i = 0; i < 8; i++) {
     framesPaulino[i] = loadImage("data/paulino" + (i + 1) + ".png");
   }
-  
+
   for (let i = 0; i < 5; i++) {
     imagenesTroncos[i] = loadImage("data/tronco" + (i + 1) + ".png");
   }
@@ -39,13 +39,11 @@ function preload() {
 
 function setup() {
   createCanvas(800, 600);
-  juego = new Juego();
   pantallas = new Pantallas();
 }
 
-
 function draw() {
-  pantallas.actualizar(juego, sonidoRio);
+  pantallas.actualizar();
 }
 
 function mousePressed() {
